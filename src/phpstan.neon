@@ -1,0 +1,8 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+parameters:
+    paths:
+        - app/Http/Controllers
+    fileExtensions:
+        - php
+    level: 5
