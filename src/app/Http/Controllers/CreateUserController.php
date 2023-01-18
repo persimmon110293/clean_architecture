@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\CreateUserRequest;
 use App\Packages\UseCases\User\Create\ICreateUserUseCase;
 
 class CreateUserController extends Controller
 {
-    public function __invoke(ICreateUserUseCase $interactor)
+    public function __invoke(CreateUserRequest $request, ICreateUserUseCase $interactor)
     {
-        return $interactor->createUser();
+        $params = $request->all();
+        return $interactor->createUser($params);
     }
 }

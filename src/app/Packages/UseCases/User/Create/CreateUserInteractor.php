@@ -14,8 +14,8 @@ class CreateUserInteractor implements ICreateUserUseCase
         $this->service = $service;
     }
 
-    public function createUser()
+    public function createUser(array $params)
     {
-        return $this->service->createUser();
+        return $this->service->createUser($params);
     }
 }

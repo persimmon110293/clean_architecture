@@ -13,8 +13,8 @@ class UserService
         $this->repository = $repository;
     }
 
-    public function createUser()
+    public function createUser(array $params)
     {
-        return $this->repository->save();
+        return $this->repository->save($params);
     }
 }

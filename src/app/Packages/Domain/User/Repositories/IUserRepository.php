@@ -4,5 +4,5 @@ namespace App\Packages\Domain\User\Repositories;
 
 interface IUserRepository
 {
-    public function save();
+    public function save(array $params);
 }
