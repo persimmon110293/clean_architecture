@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CreateUserController;
+use App\Http\Controllers\GetUserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/createUser', CreateUserController::class);
+Route::get('/getUser', GetUserController::class);

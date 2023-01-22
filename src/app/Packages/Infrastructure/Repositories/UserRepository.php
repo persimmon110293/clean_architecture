@@ -23,4 +23,11 @@ class UserRepository implements IUserRepository
                 'updated_at' => Carbon::now()
             ]);
     }
+
+    public function findById(array $params)
+    {
+        return DB::table('users')
+                ->where('id', $params['id'])
+                ->first();
+    }
 }
