@@ -20,7 +20,7 @@ class UserRepository implements IUserRepository
                 'age'        => $params['age'],
                 'email'      => $params['email'],
                 'password'   => $params['password'],
-                'crated_at'  => Carbon::now(),
+                'created_at'  => Carbon::now(),
                 'updated_at' => Carbon::now()
             ]);
     }
