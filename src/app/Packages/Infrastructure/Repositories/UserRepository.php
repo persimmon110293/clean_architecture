@@ -3,6 +3,7 @@
 namespace App\Packages\Infrastructure\Repositories;
 
 use App\Packages\Domain\User\Repositories\IUserRepository;
+use App\Packages\Domain\User\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Carbon;
 
@@ -26,8 +27,10 @@ class UserRepository implements IUserRepository
 
     public function findById(array $params)
     {
-        return DB::table('users')
+        $row_user = DB::table('users')
                 ->where('id', $params['id'])
                 ->first();
+
+        return new User($row_user);
     }
 }

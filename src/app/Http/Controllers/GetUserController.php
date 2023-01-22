@@ -9,6 +9,8 @@ class GetUserController extends Controller
 {
     public function __invoke(GetUserRequest $request, IGetUserUseCase $interactor)
     {
-        return $interactor->getUser($request->all());
+        $user = $interactor->getUser($request->all());
+        dd($user);
+        // return $interactor->getUser($request->all());
     }
 }
