@@ -34,8 +34,8 @@ services:
       MYSQL_PASSWORD: password
       MYSQL_ROOT_PASSWORD: password
       TZ: 'Asia/Tokyo'
-    volumes:
-      - mysql-volume:/var/lib/mysql
+    # volumes:
+    #   - mysql-volume:/var/lib/mysql
 
-volumes:
-  mysql-volume:
+# volumes:
+#   mysql-volume:
